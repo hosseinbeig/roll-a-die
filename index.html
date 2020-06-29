@@ -3,6 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Orbitron:wght@400;500;600;700;800;900&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="style.css" />
     <script src="app.js" defer></script>
     <title>Dice</title>
@@ -13,21 +22,45 @@
         <header class="header">
           <h1 class="title">role the dice</h1>
           <h5>welcome to your game</h5>
+          <button onclick="getName()" class="startGame">Start The Game</button>
         </header>
         <section>
-          <div class="left">
+          <div class="playPanel0 active">
             <div class="sectionDiv">
-              <p>you</p>
+              <p id="playerName" class="activeName">Player</p>
+              <p class="score-0"></p>
             </div>
 
-            <button>click</button>
+            <div class="row">
+              <i class="material-icons">face</i>
+              <p id="activePlayer0"></p>
+            </div>
           </div>
-          <div class="right">
+          <img class="dice" src="./assets/dice-5.png" alt="dice" />
+          <div class="btnWrapper">
+            <button class="toggleDice">
+              Roll the dice
+              <span class="material-icons">
+                play_arrow
+              </span>
+            </button>
+            <button class="holdScores">
+              Hold The Scores
+              <span class="material-icons">
+                motion_photos_paused
+              </span>
+            </button>
+          </div>
+          <div class="playPanel1">
             <div class="sectionDiv">
-              <p>computer</p>
+              <p class="activeName">computer</p>
+              <p class="score-1"></p>
             </div>
 
-            <button>click</button>
+            <div class="row">
+              <i class="material-icons">computer</i>
+              <p id="activePlayer1"></p>
+            </div>
           </div>
         </section>
       </main>
